@@ -3,12 +3,13 @@ Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików mp3
 Name:		mp3asm
 Version:	0.01
 Release:	1
+Copyright:	Oliver Fromme <olli@fromme.com>
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Copyright:	Oliver Fromme <olli@fromme.com
-Source0:	%{name}-%{version}.tar.gz
-URL:		http://dorifer.heim3.tu-clausthal.de/~olli/mpg123/%{name}.html
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.gz
+#Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.bz2
+URL:		http://www.mp3asm.com/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

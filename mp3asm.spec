@@ -25,7 +25,7 @@ uszkodzonych plików mp3, wycinania fragmentów plików i ich montowania.
 %setup -q
 
 %build
-%{__make} CFLAGS="{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
+%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

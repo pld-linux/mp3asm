@@ -24,7 +24,7 @@ uszkodzonych plików mp3, wycinania fragmentów plików i ich montowania.
 %setup -q -n %{name}-0.1
 
 %build
-autoconf
+%{__autoconf}
 %configure
 
 %{__make} CFLAGS="%{rpmcflags}"

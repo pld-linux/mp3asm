@@ -1,5 +1,5 @@
-Summary:	A small tool to fix and manipulate mp3 files.
-Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików mp3.
+Summary:	A small tool to fix and manipulate mp3 files
+Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików mp3
 Name:		mp3asm
 Version:	0.01
 Release:	1
@@ -25,11 +25,10 @@ uszkodzonych plików mp3, wycinania fragmentów plików i ich montowania.
 %setup -q
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS"
+%{__make} CFLAGS="{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install mp3asm $RPM_BUILD_ROOT%{_bindir}

@@ -5,8 +5,6 @@ Version:	0.1.3
 Release:	1
 License:	GPL
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D¼wiêk
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.bz2
 URL:		http://www.mp3asm.com/
 BuildRequires:	autoconf

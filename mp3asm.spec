@@ -2,7 +2,7 @@ Summary:	A small tool to fix and manipulate mp3 files
 Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików mp3
 Name:		mp3asm
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/mp3asm/%{name}-%{version}.tar.bz2
@@ -28,12 +28,14 @@ uszkodzonych plików mp3, wycinania fragmentów plików i ich montowania.
 %{__autoconf}
 %configure
 
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT

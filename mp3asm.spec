@@ -1,15 +1,15 @@
 Summary:	A small tool to fix and manipulate mp3 files
 Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików mp3
 Name:		mp3asm
-Version:	0.01
+Version:	0.1.3
 Release:	1
-Copyright:	Oliver Fromme <olli@fromme.com>
+License:	GPL
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.gz
-#Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/mp3asm/%{name}-%{version}.tar.bz2
 URL:		http://www.mp3asm.com/
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,18 +23,20 @@ znajdowania b³êdów w plikach d¼wiêkowych MPEG (.mp3), naprawiania
 uszkodzonych plików mp3, wycinania fragmentów plików i ich montowania.
 
 %prep
-%setup -q
+%setup -q -n %{name}-0.1
 
 %build
+autoconf
+%configure
+
 %{__make} CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
 
-install mp3asm $RPM_BUILD_ROOT%{_bindir}
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README
+gzip -9nf README Changelog
 
 %clean
 rm -rf $RPM_BUILD_ROOT

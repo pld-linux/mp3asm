@@ -1,5 +1,5 @@
 Summary:	A small tool to fix and manipulate MP3 files
-Summary(pl):	Ma³e narzêdzie do naprawiania i obróbki plików MP3
+Summary(pl.UTF-8):   MaÅ‚e narzÄ™dzie do naprawiania i obrÃ³bki plikÃ³w MP3
 Name:		mp3asm
 Version:	0.1.3
 Release:	2
@@ -16,10 +16,10 @@ mp3asm is a small but useful tool which can be used for the following:
 finding errors in MPEG audio (.MP3) files, fixing broken MP3 files,
 cutting and re-assembling MP3 files.
 
-%description -l pl
-mp3asm jest ma³ym ale u¿ytecznym narzêdziem które mo¿e byæ u¿yte do:
-znajdowania b³êdów w plikach d¼wiêkowych MPEG (.MP3), naprawiania
-uszkodzonych plików MP3, wycinania fragmentów plików i ich montowania.
+%description -l pl.UTF-8
+mp3asm jest maÅ‚ym ale uÅ¼ytecznym narzÄ™dziem ktÃ³re moÅ¼e byÄ‡ uÅ¼yte do:
+znajdowania bÅ‚Ä™dÃ³w w plikach dÅºwiÄ™kowych MPEG (.MP3), naprawiania
+uszkodzonych plikÃ³w MP3, wycinania fragmentÃ³w plikÃ³w i ich montowania.
 
 %prep
 %setup -q -n %{name}-0.1

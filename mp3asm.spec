@@ -1,5 +1,5 @@
 Summary:	A small tool to fix and manipulate MP3 files
-Summary(pl.UTF-8):   Małe narzędzie do naprawiania i obróbki plików MP3
+Summary(pl.UTF-8):	Małe narzędzie do naprawiania i obróbki plików MP3
 Name:		mp3asm
 Version:	0.1.3
 Release:	2
